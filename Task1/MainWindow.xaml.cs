@@ -109,7 +109,7 @@ namespace Task1
         // Method to calculate inputted IDs
         private void calculateAllInputedIDs()
         {
-            string[] ids = idTextBox.Text.Split(',', ';', StringSplitOptions.RemoveEmptyEntries);
+            string[] ids = idTextBox.Text.Split(new char[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries);
             if (ids.Length < 0 || ids.Length > 3)
             {
                 MessageBox.Show("Number of IDs have to be from 0 to 3 and splitted with ',' or ';'", "Error");
